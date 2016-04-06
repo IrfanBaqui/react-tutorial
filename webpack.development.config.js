@@ -24,19 +24,6 @@ var config = {
         test: /\.js/,
         loaders: ['babel'],
         include: [path.join(__dirname, 'src')]
-      },
-      {
-        test: /\.css?$/,
-        loaders: ['style-loader', 'css-loader', 'postcss-loader']
-      },
-      {
-        test: /\.json?$/,
-        loaders: ['raw']
-      },
-      {
-        test: /\.png$/,
-        loader: 'url',
-        query: { limit: 8192, mimetype: 'image/png' }
       }
     ]
   }

@@ -6,6 +6,10 @@
   "scripts": {
     "build-dev": "webpack --config webpack.development.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:react-class/react-step-by-step-tutorial.git"
+  },
   "author": "Irfan Baqui",
   "license": "ISC",
   "dependencies": {

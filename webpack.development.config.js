@@ -3,8 +3,11 @@ var webpack = require('webpack')
 
 var config = {
 
+  devtool: 'eval',
+
   entry: [
-    'src/App.js'
+    './src/index',
+    'webpack-hot-middleware/client'
   ],
 
   output: {
@@ -18,11 +21,16 @@ var config = {
     extensions: ['', '.js']
   },
 
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
+  ],
+
   module: {
     loaders: [
       {
-        test: /\.js/,
-        loaders: ['babel'],
+        test: /\.js$/,
+        loaders: ['react-hot', 'babel'],
         include: [path.join(__dirname, 'src')]
       }
     ]

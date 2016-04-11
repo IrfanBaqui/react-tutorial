@@ -7,11 +7,13 @@
  My approach in this tutorial is to teach you through branches. The branch names are 'step1', 'step2' ... and the description is below.
 
 
- ### Index
+### Index
 
- Step 1: Building a bare-bones react project using WebPack
+* Step 1: Building a bare-bones react project using WebPack
+* Step 2: Add Hot Module Reloading and switch to ES2015
+* Step 3: Introduce state and making the calculator functional
 
- ### Build Process
+### Build Process
 
  ```
  npm run build-dev

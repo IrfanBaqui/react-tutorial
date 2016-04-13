@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {SquareButton, VerticalRectangularButton, HorizontalRectangularButton, Screen} from "./Components/Button"
+import {SquareButton, VerticalRectangularButton, HorizontalRectangularButton, Screen} from "./Components/Buttons/Button"
 
 var buttonNumberData = [
                         [{data:'CLEAR'}],
@@ -55,15 +55,28 @@ export default class Calculator extends Component {
     var numbers;
     if (value.indexOf('-') !== -1) {
       numbers = value.split('-')
+
       this.setState({value: Number(numbers[0]) - Number(numbers[1])})
-    } else if (value.indexOf('+') !== -1) {
+      this.props.onChange(this.generateTransaction(numbers, '-'))
+    }
+    else if (value.indexOf('+') !== -1) {
       numbers = value.split('+')
+
       this.setState({value: Number(numbers[0]) + Number(numbers[1])})
-    } else value = 'Invalid Input'
+      this.props.onChange(this.generateTransaction(numbers, '+'))
+    }
+    else {
+      value = 'Invalid Input'
+    }
+  }
+
+  generateTransaction(numbers, type) {
+    var num1 = Number(numbers[0])
+    var num2 = Number(numbers[1])
+    return num1 + ' ' + type + ' ' + num2 + ' = ' + (num1 - num2)
   }
 
   clickHandler(value) {
-    console.log('value', value);
     if (value === 'CLEAR') {
       this.setState({value: ''});
     } else if (value === '=') {

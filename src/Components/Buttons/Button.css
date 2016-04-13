@@ -3,9 +3,11 @@ body {
 }
 
 .calculator {
+    align-self: flex-start;
     width: 235px;
     padding: 5px;
-    margin: 0 auto;
+    margin: 0 5%;
+    margin-top: 5%;
     border: 1px solid #000000;
 }
 

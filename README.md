@@ -11,10 +11,13 @@
 
 * Step 1: Building a bare-bones react project using WebPack
 * Step 2: Add Hot Module Reloading and switch to ES2015
-* Step 3: Introduce state and making the calculator functional
+* Step 3: Introduce state and containers and making the calculator functional
+* Step 4: Advanced state management without React Router. Added transaction history.
 
 ### Build Process
 
  ```
+ npm install
  npm run build-dev
+ npm run start
  ```
